@@ -1,0 +1,11 @@
+DirectoryIndex IndexApp.lpp.php
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on 
+    RewriteCond %{REQUEST_FILENAME} !-d 
+    
+    RewriteCond %{REQUEST_FILENAME}App.lpp.php -f
+    RewriteRule ^(.*) $1App.lpp.php 
+</IfModule>
